@@ -1,0 +1,648 @@
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #main {
+    height: 1000px;
+    width: 1000px;
+
+    background: #F3F4F6;
+  }
+
+  #container {
+    border: 1px solid black;
+
+    display: flex;
+    gap: 10px;
+    height: 100%;
+  }
+
+  aside {
+
+    padding: 8px 8px 11px 0px;
+    width: 242px;
+    border-radius: 6px;
+    background: #1E293B;
+  }
+
+  .top-nav {
+    display: flex;
+
+    align-items: center;
+    gap: 8px;
+    color: #14B8A6;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    display: flex;
+    height: 81px;
+    padding-left: 20px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #334155;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .bottom-nav {}
+
+  .menus {
+    display: flex;
+    width: 242px;
+    height: 72px;
+
+    padding: 0px 99.34px 0px 24px;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    color: white;
+  }
+
+  .dashboard {
+
+    width: 100%;
+    background: #F3F4F6;
+    margin: 2px;
+
+
+
+  }
+
+  .top-controls {
+    display: inline-flex;
+    padding: 16px;
+    margin-top: 2px;
+    align-items: center;
+    gap: 74.41px;
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .search {
+    display: flex;
+    gap: 32px;
+    width: 65%;
+    display: inline-flex;
+    margin-right: auto;
+
+
+    align-items: center;
+
+  }
+
+  .input {
+    border-radius: 16px;
+    background: #F3F4F6;
+    padding: 7.5px 14.18px 7.5px 16px;
+    width: 280px;
+  }
+
+  .switcher {
+    background: #F3F4F6;
+    width: 200px;
+    display: inline-flex;
+
+
+    align-items: center;
+    gap: 10px;
+
+
+  }
+
+  .list-view {
+    width: 100px;
+    padding: 4px 15.09px 4px 16px;
+    background: black;
+    color: white;
+    border-radius: 12px;
+  }
+
+  .grid-view {
+    width: 100px;
+    padding: 4px 15.09px 4px 16px;
+  }
+
+  .table {
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-top: 38px;
+    width: 98%;
+    background: black;
+    border-radius: 12px;
+    height: 510px;
+    padding: 16px 0px 8px 10px;
+
+
+  }
+
+  .table-top {
+    color: white;
+  }
+
+  .table-top h2 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 66.667% */
+    ;
+  }
+
+  .instructions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    align-items: center;
+
+  }
+
+  .instructions p {
+    color: #E5E7EB;
+    font-size: 14px;
+  }
+
+  .instructions button {
+
+    border-radius: 6px;
+    background: green;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding: 6.5px 12.36px 5.5px 11px;
+    border-radius: 6px;
+  }
+
+  .main-table {
+
+    height: 370px;
+    margin-top: 47px;
+    border-radius: 12px;
+
+  }
+
+  .table-head {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    color: white;
+    background: #767676;
+    padding: 8px 24px;
+    height: 51px;
+
+  }
+
+  .stripped {
+    background: #F9FAFB;
+    color: black;
+  }
+
+  .non-stripped {
+    color: black;
+    background: white;
+  }
+
+  .table-head h3. grren-text {
+    color: #059669;
+  }
+
+
+
+  .first-cell {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .cards {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 10px;
+
+
+
+
+    margin: 14px;
+
+    margin-top: 35px
+  }
+
+  .card {
+
+    width: 47%;
+    padding: 17px 16px 80px 16px;
+
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 280px;
+
+
+
+  }
+
+  .card h2 {
+
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 133.333% */
+
+  }
+
+  .chips-container {
+    display: flex;
+    gap: 10px;
+
+  }
+
+  .card .chips {
+
+    border-radius: 6px;
+    background: #FECACA;
+    display: flex;
+    padding: 6px;
+    font-weight: 400;
+
+  }
+
+  .card h4 {
+    color: #4B5563;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+
+  }
+
+  .card-1 {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  }
+
+  
+  .card-2 {
+border-radius: 8px;
+background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
+box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+color:white;
+
+  }
+
+  .card-2 .chips{
+  background:#BBF7D0; color:black}
+
+   .card-2 .comments{
+   color:white;
+   }
+
+   .card-2 svg{
+   color:white;
+   }
+  .comments {
+    display: flex;
+    gap: 8px;
+  }
+
+  .comments svg {
+    color: gray;
+  }
+</style>
+<div id="main">
+
+  <section id="container">
+
+    <aside>
+      <div class="top-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+          <path fillRule="evenodd"
+            d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+            clipRule="evenodd" />
+        </svg>
+        <h2>Bell Labs</h2>
+
+
+      </div>
+      <div class="bottom-nav">
+        <div class="menus menu-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path
+              d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+            <path
+              d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+          </svg>
+          DashBoard
+
+
+
+
+        </div>
+
+
+        <div class="menus menu-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M15.75 1.5a6.75 6.75 0 00-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 00-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 00.75-.75v-1.5h1.5A.75.75 0 009 19.5V18h1.5a.75.75 0 00.53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1015.75 1.5zm0 3a.75.75 0 000 1.5A2.25 2.25 0 0118 8.25a.75.75 0 001.5 0 3.75 3.75 0 00-3.75-3.75z"
+              clip-rule="evenodd" />
+          </svg>
+
+          Projects
+
+
+
+
+        </div>
+
+
+        <div class="menus menu-1" style=background:#10b981>
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+
+          Tasks
+
+
+
+
+        </div>
+
+
+        <div class="menus menu-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M17.663 3.118c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 01-3 3V16.5c0-5.922-4.576-10.775-10.384-11.217.324-1.132 1.3-2.01 2.548-2.114.224-.019.448-.036.673-.051A3 3 0 0113.5 1.5H15a3 3 0 012.663 1.618zM12 4.5A1.5 1.5 0 0113.5 3H15a1.5 1.5 0 011.5 1.5H12z"
+              clip-rule="evenodd" />
+            <path
+              d="M3 8.625c0-1.036.84-1.875 1.875-1.875h.375A3.75 3.75 0 019 10.5v1.875c0 1.036.84 1.875 1.875 1.875h1.875A3.75 3.75 0 0116.5 18v2.625c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625v-12z" />
+            <path
+              d="M10.5 10.5a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963 5.23 5.23 0 00-3.434-1.279h-1.875a.375.375 0 01-.375-.375V10.5z" />
+          </svg>
+
+          Services
+
+
+
+
+        </div>
+
+        <div class="menus menu-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z"
+              clip-rule="evenodd" />
+          </svg>
+
+          Chat
+
+
+
+
+        </div>
+      </div>
+    </aside>
+
+    <section class="dashboard">
+
+
+      <!-- #search -->
+
+      <div class="top-controls">
+
+        <div class="search">
+          <input class="input" placeholder="Search..." />
+Friday, 5 June
+        </div>
+        <div class="switcher">
+
+          <button class="list-view">List View</button>
+          <button>Grid View</button>
+
+        </div>
+
+
+
+
+        <!-- #table -->
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="table">
+
+        <div class="table-top">
+          <h2>Latest Tasks</h2>
+
+          <div class="instructions">
+            <p>A list of all the users in your account including their name, title, email and
+              role.</p>
+
+            <button>Add more people</button>
+          </div>
+
+        </div>
+
+
+
+        <div class="main-table">
+
+          <div class="table-head ">
+
+            <div class="first-cell">
+
+              <input type="checkbox"/>
+              <h3>Name</h3>
+            </div>
+            <h3>Title</h3>
+            <h3>Role</h3>
+            <h3></h3>
+          </div>
+
+
+
+          <div class="table-head stripped">
+
+            <div class="first-cell">
+
+              <input checked type="checkbox"/>
+              <h3 style="color:#059669; font-weight:bold">Johnm Smith</h3>
+            </div>
+            <h3>Back-end Developer</h3>
+            <h3>Member</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+
+          <div class="table-head non-stripped">
+
+            <div class="first-cell">
+
+              <input type="checkbox"/>
+              <h3>Jane Doe</h3>
+            </div>
+            <h3>Full Stack Developer</h3>
+            <h3>Admin</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+
+          <div class="table-head stripped">
+
+            <div class="first-cell">
+
+              <input checked type="checkbox"/>
+              <h3 style="color:#059669; font-weight:bold">Bob Johnson</h3>
+            </div>
+            <h3>UI Designer</h3>
+            <h3>Member</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+
+          <div class="table-head non-stripped">
+
+            <div class="first-cell">
+
+              <input  type="checkbox"/>
+              <h3>Sarah Lee</h3>
+            </div>
+            <h3>Front end Developer</h3>
+            <h3>Admin</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+
+          <div class="table-head stripped">
+
+            <div class="first-cell">
+
+              <input  checked type="checkbox"/>
+              <h3 style="color:#059669; font-weight:bold">Tom Brown</h3>
+            </div>
+            <h3>Back-end Developer</h3>
+            <h3>Member</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+          <div class="table-head non-stripped">
+
+            <div class="first-cell">
+
+              <input  type="checkbox"/>
+              <h3>Emily Brown</h3>
+            </div>
+            <h3>Full Stack Developer</h3>
+            <h3>Admin</h3>
+            <h3 style="color:#059669" class="green-text">Edit</h3>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+      <!-- #cards -->
+
+
+      <div class="cards">
+
+        <div class="card card-1">
+
+          <h2> Projects in progres</h2>
+
+          <div class="chips-container">
+            <span class="chips chip-1"> Developement in Progress</span>
+            <span class="chips chip-2">build failed</span>
+          </div>
+
+
+          <h4>Improve code quality</h4>
+
+
+          <h5> Raised by Manu Arora , 2 hours ago</h5>
+
+
+          <div class="comments container">
+
+            <span class="comments"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd" />
+</svg>
+ 17 Comments</span>
+            <span class="comments"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z" clip-rule="evenodd" />
+</svg>
+ 23 files modified</span>
+          </div>
+
+        </div>
+       <div class="card card-2">
+
+          <h2 style="color:white"> Projects Completed</h2>
+
+          <div class="chips-container">
+            <span class="chips chip-1"> Deloyment in Progress</span>
+            <span class="chips chip-2">Build passing</span>
+          </div>
+
+
+          <h4 style="color:white">Deploy hotfix</h4>
+
+
+          <h5> Raised by Manu Arora , 17 hours ago</h5>
+
+
+          <div class="comments container">
+
+            <span class="comments"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd" />
+</svg>
+ 12 Comments</span>
+            <span class="comments"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm.53 5.47a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.72-1.72v5.69a.75.75 0 001.5 0v-5.69l1.72 1.72a.75.75 0 101.06-1.06l-3-3z" clip-rule="evenodd" />
+</svg>
+ 2 files modified</span>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+</div>
