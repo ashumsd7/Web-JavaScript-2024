@@ -18,13 +18,13 @@
     }
   </style>
   <body>
-    <div id="grand-parent">
+    <section id="grand-parent">
       grand
       <div id="parent">
         parent
-        <div id="child">child</div>
+        <p id="child">child</p>
       </div>
-    </div>
+    </section>
     <script>
       const child = document.getElementById("child");
       const parent = document.getElementById("parent");
@@ -33,8 +33,8 @@
       child.addEventListener("click", () => {
         console.log("child click");
       });
-      parent.addEventListener("click", () => {
-        console.log("parent click");
+      parent.addEventListener("click", (e) => {
+        console.log("parent click : Target Tag is", e.target.tagName);
       });
       grand.addEventListener("click", () => {
         console.log("grand parent click");
